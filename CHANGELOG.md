@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Expanded the README with repository details, badges, release history, roadmap,
+  and FAQ.
+- Added release notes, issue templates, a pull-request template, Dependabot
+  configuration, and a security policy.
+
 ## [1.0.0] - 2026-11-26
 
 ### Added

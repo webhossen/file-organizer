@@ -4,9 +4,12 @@ A safe, fast command-line tool that tidies a folder by sorting files into
 subfolders — by extension or by category.
 
 [![CI](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![Release](https://img.shields.io/github/v/release/webhossen/file-organizer?sort=semver)](https://github.com/webhossen/file-organizer/releases)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/github/license/webhossen/file-organizer)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+[![Last commit](https://img.shields.io/github/last-commit/webhossen/file-organizer)](https://github.com/webhossen/file-organizer/commits/main)
+[![Issues](https://img.shields.io/github/issues/webhossen/file-organizer)](https://github.com/webhossen/file-organizer/issues)
 
 ## Features
 
@@ -59,6 +62,22 @@ Downloads/
 ├── Audio/song.mp3
 └── Archives/archive.zip
 ```
+
+## Repository details
+
+| Field | Value |
+| --- | --- |
+| **Repository** | [webhossen/file-organizer](https://github.com/webhossen/file-organizer) |
+| **Version** | **1.0.0** |
+| **Release** | [v1.0.0](https://github.com/webhossen/file-organizer/releases/tag/v1.0.0) |
+| **License** | [MIT](LICENSE) |
+| **Python** | 3.9+ |
+| **Platforms** | Windows, macOS, Linux |
+| **Package** | `file-organizer` (`file_organizer`) |
+| **Commands** | `file-organizer`, `python -m file_organizer` |
+| **Tests** | 22 pytest tests |
+| **CI** | [GitHub Actions](https://github.com/webhossen/file-organizer/actions) |
+| **Status** | Active |
 
 ## Installation
 
@@ -183,7 +202,12 @@ pytest --cov=file_organizer --cov-report=term-missing
 
 ```text
 .
-├── .github/workflows/ci.yml
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   ├── workflows/ci.yml
+│   ├── dependabot.yml
+│   └── pull_request_template.md
+├── docs/releases/v1.0.0.md
 ├── legacy/myfile.py          # original single-file script, kept for reference
 ├── src/file_organizer/
 │   ├── __init__.py
@@ -200,8 +224,62 @@ pytest --cov=file_organizer --cov-report=term-missing
 ├── FileOrganizer.spec        # PyInstaller build recipe
 ├── LICENSE
 ├── README.md
+├── SECURITY.md
 └── pyproject.toml
 ```
+
+## Tags and releases
+
+The project follows [Semantic Versioning](https://semver.org/) and every release
+is tagged as `vMAJOR.MINOR.PATCH`.
+
+| Tag | Date | Highlights |
+| --- | --- | --- |
+| [`v1.0.0`](https://github.com/webhossen/file-organizer/releases/tag/v1.0.0) | 2026-11-26 | Initial public release: extension and category modes, collision-safe moves, dry-run, recursion, ignore globs, hidden-file control, tests, CI, and PyInstaller build. |
+
+Each release includes:
+
+- `file_organizer-1.0.0-py3-none-any.whl` — installable wheel
+- `file_organizer-1.0.0.tar.gz` — source distribution
+- `FileOrganizer.exe` — standalone Windows executable
+
+See the [releases page](https://github.com/webhossen/file-organizer/releases) for
+downloads and full release notes.
+
+## Roadmap
+
+- [x] Extension and category modes
+- [x] Collision-safe moves and dry-run preview
+- [x] Recursive mode, ignore globs, and hidden-file controls
+- [x] CI on Windows, macOS, and Linux for Python 3.9–3.14
+- [ ] User-defined category rules via a config file
+- [ ] `--json` machine-readable report
+- [ ] Undo log for the most recent run
+- [ ] Watch mode for continuously organizing a folder
+
+## FAQ
+
+**Does File Organizer delete files?**
+No. It only moves files into subfolders.
+
+**Will it overwrite an existing file?**
+No. Name clashes get a numeric suffix such as `report_1.pdf`.
+
+**Can I undo a run?**
+There is no built-in undo yet. Use `--dry-run` first and keep backups for
+important folders.
+
+**Does it work on external or network drives?**
+Yes. `shutil.move` falls back to copy-and-delete when a rename across
+filesystems is not possible.
+
+**Are hidden files processed?**
+Yes by default. Pass `--skip-hidden` to leave dotfiles and dot-directories
+alone.
+
+**Why does CI test Python 3.9 on Ubuntu 22.04?**
+Ubuntu 26.04 no longer ships Python 3.9, so that one job runs on 22.04 while the
+rest of the matrix uses the latest runner.
 
 ## Contributing
 
