@@ -41,6 +41,12 @@ exe = ["pyinstaller>=6.6"]
 [project.scripts]
 file-organizer = "file_organizer.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/webhossen/file-organizer"
+Repository = "https://github.com/webhossen/file-organizer"
+Issues = "https://github.com/webhossen/file-organizer/issues"
+Changelog = "https://github.com/webhossen/file-organizer/blob/main/CHANGELOG.md"
+
 [tool.setuptools]
 package-dir = { "" = "src" }
 

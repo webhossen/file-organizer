@@ -3,6 +3,7 @@
 A safe, fast command-line tool that tidies a folder by sorting files into
 subfolders — by extension or by category.
 
+[![CI](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
@@ -64,7 +65,7 @@ Downloads/
 ### From source (recommended with pipx)
 
 ```console
-git clone <your-repository-url>
+git clone https://github.com/webhossen/file-organizer.git
 cd file-organizer
 pipx install .
 ```
@@ -156,7 +157,7 @@ input or folder, `130` cancelled.
 ## Development
 
 ```console
-git clone <your-repository-url>
+git clone https://github.com/webhossen/file-organizer.git
 cd file-organizer
 python -m venv .venv
 

@@ -16,7 +16,7 @@ Use `--dry-run` when sharing examples from real folders.
 ## Development setup
 
 ```console
-git clone <your-repository-url>
+git clone https://github.com/webhossen/file-organizer.git
 cd file-organizer
 python -m venv .venv
 ```
