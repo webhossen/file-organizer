@@ -49,7 +49,7 @@ All checks must pass. Please also:
 
 - add or update tests for behaviour changes;
 - update `README.md` and `CHANGELOG.md` when user-facing behaviour changes;
-- keep the code compatible with Python 3.9+;
+- keep the code compatible with Python 3.10+;
 - keep the core logic in `src/file_organizer/organizer.py` free of CLI concerns.
 
 ## Commit messages

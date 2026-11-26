@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Require Python 3.10+ (Python 3.9 is end-of-life) and update the development
+  dependencies to their current releases.
 - Expanded the README with repository details, badges, release history, roadmap,
   and FAQ.
 - Added release notes, issue templates, a pull-request template, Dependabot

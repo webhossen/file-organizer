@@ -13,4 +13,4 @@
 - [ ] `ruff format --check .` passes
 - [ ] `pytest` passes
 - [ ] README and CHANGELOG updated for user-facing changes
-- [ ] Changes remain compatible with Python 3.9+
+- [ ] Changes remain compatible with Python 3.10+

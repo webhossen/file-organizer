@@ -5,7 +5,7 @@ subfolders — by extension or by category.
 
 [![CI](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/webhossen/file-organizer/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/webhossen/file-organizer?sort=semver)](https://github.com/webhossen/file-organizer/releases)
-[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/github/license/webhossen/file-organizer)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 [![Last commit](https://img.shields.io/github/last-commit/webhossen/file-organizer)](https://github.com/webhossen/file-organizer/commits/main)
@@ -71,7 +71,7 @@ Downloads/
 | **Version** | **1.0.0** |
 | **Release** | [v1.0.0](https://github.com/webhossen/file-organizer/releases/tag/v1.0.0) |
 | **License** | [MIT](LICENSE) |
-| **Python** | 3.9+ |
+| **Python** | 3.10+ |
 | **Platforms** | Windows, macOS, Linux |
 | **Package** | `file-organizer` (`file_organizer`) |
 | **Commands** | `file-organizer`, `python -m file_organizer` |
@@ -80,6 +80,8 @@ Downloads/
 | **Status** | Active |
 
 ## Installation
+
+File Organizer requires **Python 3.10 or newer**.
 
 ### From source (recommended with pipx)
 
@@ -251,7 +253,7 @@ downloads and full release notes.
 - [x] Extension and category modes
 - [x] Collision-safe moves and dry-run preview
 - [x] Recursive mode, ignore globs, and hidden-file controls
-- [x] CI on Windows, macOS, and Linux for Python 3.9–3.14
+- [x] CI on Windows, macOS, and Linux for Python 3.10–3.14
 - [ ] User-defined category rules via a config file
 - [ ] `--json` machine-readable report
 - [ ] Undo log for the most recent run
@@ -277,9 +279,9 @@ filesystems is not possible.
 Yes by default. Pass `--skip-hidden` to leave dotfiles and dot-directories
 alone.
 
-**Why does CI test Python 3.9 on Ubuntu 22.04?**
-Ubuntu 26.04 no longer ships Python 3.9, so that one job runs on 22.04 while the
-rest of the matrix uses the latest runner.
+**What Python versions are supported?**
+Python 3.10 and newer. CI runs on Python 3.10–3.14 across Windows, macOS, and
+Linux.
 
 ## Contributing
 
